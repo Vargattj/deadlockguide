@@ -1,0 +1,189 @@
+{
+  "weapon": {
+    "tier1": [
+      {
+        "name": "Basic Magazine",
+        "attributes": ["+24% Ammo", "+15% Weapon Damage"],
+        "componentOf": "Titanic Magazine Component",
+        "category": "weapon",
+        "tier": "1"
+      },
+      {
+        "name": "Close Quarters",
+        "attributes": ["+85 Bullet Shield Health"],
+        "componentOf": "Titanic Magazine Component",
+        "passive": "Deal additional Weapon Damage when in close range to your target",
+        "passiveConditional": ["+25% Weapon Damage (Conditional)"],
+        "passiveInfo": "15m Close Range",
+        "category": "weapon",
+        "tier": "1"
+      },
+      {
+        "name": "Headshot Booster",
+        "attributes": ["+5% fire rate", "+40% Bullet Shield Health"],
+        "passive": "Deal bonus Weapon Damage with headshots",
+        "passiveCd": "7.5s",
+        "headshotBonusDamage": "+40 Headshot Bonus Damage",
+        "category": "weapon",
+        "tier": "1"
+      },
+      {
+        "name": "High-Velocity Mag",
+        "attributes": [
+          "+30% Bullet Velocity",
+          "+12% Weapon Damage",
+          "+50 Bullet Shield Health"
+        ],
+        "componentOf": "Headhunter Component",
+        "category": "weapon",
+        "tier": "1"
+      },
+      {
+        "name": "Hollow Point Ward",
+        "attributes": ["+85 Spirit Shield Health", "+4 Spirit Power"],
+        "passive": "When you are above 60% health, deal additional Weapon Damage.",
+        "passiveConditional": ["+22% Weapon Damage (Conditional)"],
+        "category": "weapon",
+        "tier": "1"
+      },
+      {
+        "name": "Monster Rounds",
+        "attributes": [
+          "+35% Weapon Damage vs NPCs",
+          "+30% Bullet Resist vs NPCs",
+          "+50 Bonus Health",
+          "+1 Health Regen"
+        ],
+        "category": "weapon",
+        "tier": "1"
+      },
+      {
+        "name": "Rapid Rounds",
+        "attributes": ["+9% Fire Rate", "+1m/s Sprint Speed"],
+        "category": "weapon",
+        "tier": "1"
+      },
+      {
+        "name": "Restorative Shot",
+        "attributes": ["+7% Bullet Resist ", "+8% Weapon Damage"],
+        "passive": "Your next bullet will heal you based on what target you hit",
+        "passiveConditional": ["+25% Weapon Damage (Conditional)"],
+        "passiveInfo": "15m Close Range",
+        "passiveCd": "6.5s",
+        "category": "weapon",
+        "tier": "1"
+      }
+    ],
+    "tier2": [
+      {
+        "name": "Active Reload",
+        "attributes": ["+10% Weapon Damage", "-20% Reload Time"],
+        "passive": "While reloading, pressing [R] during the highlighted portion will instantly finish your reload and grant you Fire Rate and Bullet Lifesteal.",
+        "passiveCd": "18s",
+        "passiveConditional": [
+          "+20% Fire Rate (Conditional)",
+          "+20% Bullet Lifesteal (Conditional)"
+        ],
+        "duration": "7s",
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "Berserker",
+        "attributes": ["+4 Ammo", "+7% Bullet Resist"],
+        "passive": "Your Weapon Damage increases as you take sustained damage.",
+        "passiveConditional": ["+5% Weapon Damage per Stack"],
+        "stackInfo": "110 Damage taken to Stack, 10 Max Stacks, 10s Duration",
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "Kinetic Dash",
+        "attributes": ["+100 Bonus Health", "+1.5 Health Regen"],
+        "passive": "Your next Dash-Jump does not cost an extra stamina and you gain Fire Rate and bonus Ammo until your next reload.",
+        "passiveCd": "10.5s",
+        "passiveConditional": [
+          "+25% Fire Rate (Conditional)",
+          "+5 Temporary Ammo (Conditional)"
+        ],
+        "duration": "8s",
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "Long Range",
+        "attributes": ["+20% Ammo", "+140 Bullet Shield Health"],
+        "passive": "Deal additional Weapon Damage when beyond a minimum distance from your target.",
+        "passiveConditional": ["+40% Weapon Damage (Conditional)"],
+        "minDistance": "15m",
+        "componentOf": "Sharpshooter Component",
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "Melee Charge",
+        "attributes": [
+          "+15% Weapon Damage",
+          "+100 Bonus Health",
+          "+1 Health Regen",
+          "40% Heavy Melee Distance"
+        ],
+        "passive": "Your next Heavy Melee attack against an enemy deals increased damage and reloads your weapon instantly.",
+        "passiveCd": "10s",
+        "passiveConditional": ["+20% Bonus Heavy Damage"],
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "Mystic Shot",
+        "attributes": ["+12% Weapon Damage", "+4 Spirit Power"],
+        "passive": "Your next bullet deals bonus Spirit Damage.",
+        "passiveCd": "5.2s",
+        "passiveConditional": ["+65 Spirit Damage"],
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "Slowing Bullets",
+        "attributes": ["+16% Weapon Damage", "+5 Spirit Power"],
+        "passive": "Your bullets apply Movement Slow.",
+        "passiveConditional": ["+25% Movement Slow (Conditional)"],
+        "slowDuration": "1.3s",
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "Soul Shredder Bullets",
+        "attributes": ["+7% Weapon Damage"],
+        "passive": "Your bullets apply a debuff that amplifies your Spirit Damage against the target and grants you Spirit Lifesteal against them.",
+        "passiveConditional": [
+          "10% Spirit Amp (Conditional)",
+          "+20% Spirit Lifesteal (Conditional)"
+        ],
+        "debuffDuration": "6s",
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "Swift Striker",
+        "attributes": ["+22% Fire Rate", "-5% Bullet Resist", "+10% Ammo"],
+        "category": "weapon",
+        "tier": "2"
+      },
+      {
+        "name": "FleetFoot",
+        "attributes": ["+90 Bonus Health", "+25% Slide Distance"],
+        "passive": "Removes the Movement Speed penalty while shooting.",
+        "active": "Gain Movement Speed and Ammo.",
+        "activeCd": "19s",
+        "passiveConditional": [
+          "+3m/s Movement Speed (Conditional)",
+          "+30% Temporary Ammo (Conditional)"
+        ],
+        "activeDuration": "4s",
+        "category": "weapon",
+        "tier": "2"
+      }
+    ]
+  }
+}
