@@ -1,167 +1,155 @@
 <template>
   <div class="main">
-    <ul class="items tier-1">
-      <h4 class="tier-price">
-        <img :src="getImageSrc('souls_iconColored')" alt="" class="souls-icon">
-        500
-      </h4>
-      <li v-for="(item, key) in items.weapon.tier1" :key="key" class="item">
-        <div class="item-image">
-          <img :src="getImageSrc(item.name)" alt="">
-        </div>
-        <h2>{{ item.name }}</h2>
-        <ItemInfo :item="item" />
-      </li>
-    </ul>
-    <ul class="items tier-2">
-      <h4 class="tier-price">
-        <img :src="getImageSrc('souls_iconColored')" alt="" class="souls-icon">
-        1,250
-      </h4>
-      <li v-for="(item, key) in items.weapon.tier2" :key="key" class="item">
-        <div class="item-image" :class="{ active: item.active }">
-          <img :src="getImageSrc(item.name)" alt="">
-          <span class="active-tag" v-if="item.active">ACTIVE</span>
-        </div>
-        <h2>{{ item.name }}</h2>
-        <ItemInfo :item="item" />
-      </li>
-    </ul>
+    <nav class="shop-tabs" :data-item-type="selectedItemType.toLocaleLowerCase()">
+      <button class="shop-tab-button" @click="selectShopTab('Weapon')"
+        :class="{ active: selectedItemType === 'Weapon' }">
+        Weapon
+      </button>
+      <button class="shop-tab-button" @click="selectShopTab('Armor')" :class="{ active: selectedItemType === 'Armor' }">
+        Vitality
+      </button>
+      <button class="shop-tab-button" @click="selectShopTab('Tech')" :class="{ active: selectedItemType === 'Tech' }">
+        Spirity
+      </button>
+    </nav>
+
+    <div class="shop-itens-wrapper" :data-item-type="selectedItemType.toLocaleLowerCase()">
+      <ItensTierList :itens="getItensByTier('1')" tier="1" />
+      <ItensTierList :itens="getItensByTier('2')" tier="2" />
+      <ItensTierList :itens="getItensByTier('3')" tier="3" />
+      <ItensTierList :itens="getItensByTier('4')" tier="4" />
+    </div>
+
   </div>
 </template>
 
 <script>
-import itemsData from '../items.json';
-import ItemInfo from './components/itemInfo.vue';
+import itemsData from '../item-data.json';
+import ItensTierList from './components/itensTierList.vue';
 export default {
-  components: { ItemInfo },
+  components: { ItensTierList },
   data() {
     return {
-      items: itemsData
+      items: itemsData,
+      shopItems: null,
+      selectedItemType: 'Weapon',
     };
   },
-  mounted() {
-    console.log(itemsData)
+  async mounted() {
+    this.getItens()
   },
-
   methods: {
-    getImageSrc(name) {
-      return `src/assets/items/${name.toLowerCase().replace(/ /g, '_')}.png`
+    async getItens() {
+      const entriesItens = Object.entries(this.items)
+      const filteredItems = entriesItens.filter(([key, value]) => value.Slot === this.selectedItemType);
+      const filteredAndSortedObject = Object.fromEntries(filteredItems);
+      this.shopItems = filteredAndSortedObject;
+    },
+    getItensByTier(tier) {
+      if (!this.shopItems) return
+      const entriesItens = Object.entries(this.shopItems)
+      const filteredItems = entriesItens.filter(([key, value]) => {
+        return value.Tier === tier
+      });
+      return Object.fromEntries(filteredItems);
+
+    },
+    async selectShopTab(type) {
+      this.selectedItemType = type
+      this.getItens()
     }
   }
 };
 </script>
 
 <style lang="scss">
+:root {
+  --color-weapon: #C97A03;
+  --color-armor: #7CBB1E;
+  --color-spirit: #CE91FF;
+  --color-primary: #170C00;
+  --color-secondary: #F0E2C9
+}
+
+.shop-tabs {
+  display: flex;
+  gap: 12px;
+
+  &[data-item-type='armor'] {
+    .shop-tab-button.active {
+      background-color: var(--color-armor);
+    }
+  }
+
+  &[data-item-type='tech'] {
+    .shop-tab-button.active {
+      background-color: var(--color-spirit);
+    }
+  }
+
+  .shop-tab-button {
+    height: 65px;
+    width: 150px;
+    display: block;
+    border: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    border-top: 5px solid var(--color-weapon);
+
+    &:nth-of-type(2) {
+      border-color: var(--color-armor);
+    }
+
+    &:nth-of-type(3) {
+      border-color: var(--color-spirit);
+    }
+
+    &.active {
+      background-color: var(--color-weapon);
+    }
+  }
+}
+
+.shop-itens-wrapper {
+  // height: 90vh;
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  border-top: 6px solid var(--color-weapon);
+  background-color: #584021;
+
+  &[data-item-type='armor'] {
+    background-color: #325008;
+    border-top: 6px solid var(--color-armor);
+  }
+
+  &[data-item-type='tech'] {
+    background-color: #3F2851;
+    border-top: 6px solid var(--color-spirit);
+  }
+
+}
+
 body {
-  background-color: #80530F;
-  color: #fff;
+  color: #fef7da;
+  background-repeat: no-repeat;
+  height: 100%;
 
   .main {
     margin: 0 auto;
+    padding: 16px;
   }
 
-  .items {
-    display: grid;
-    flex-wrap: wrap;
-    gap: 10px;
-    grid-template-columns: repeat(9, 1fr);
-    margin-bottom: 20px;
-    position: relative;
-    .tier-price {
-      color: #98ffde;
-      position: absolute;
-      left: -100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transform: rotate(-90deg);
-      font-weight: bold;
-      top: 50%;
-      transform: translateY(-50%), rotate(-90deg);
-      font-size: 22px;
-      .souls-icon{
-        width: 18px;
-        margin-right: 5px;
-      }
-    }
 
-    .item {
-      text-align: center;
-      background-color: #F0E2C9;
-      color: #170C00;
-      font-weight: 600;
-      border-radius: 8px;
-      width: 110px;
-      height: 130px;
-      font-family: sans-serif;
-      position: relative;
-      cursor: pointer;
-      transition: transform .2s;
-      .item-image {
-        background-color: #D08E3E;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        height: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        &.active {
-          background-color: #EFC586;
-        }
-
-        .active-tag {
-          font-weight: bold;
-          position: absolute;
-          bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: #170C00;
-          color: #F0E2C9;
-          padding: 2px 10px;
-          border-radius: 2px;
-          font-size: 12px;
-
-        }
-
-        img {
-          object-fit: cover;
-          filter: brightness(0.1) saturate(100%);
-          width: 40px;
-          height: 40px;
-        }
-      }
-
-      &:hover {
-        transform: scale(1.05);
-        z-index: 1000;
-        .item-info {
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-
-      &:nth-child(-n+3) {
-        .item-info {
-          left: 110%;
-        }
-      }
-
-      h2 {
-        padding: 10px;
-        font-size: 16px;
-        height: 50%;
-        display: flex;
-        align-items: center;
-      }
-
-      .number {
-        font-weight: bold;
-        color: #F0E2C9;
-        font-size: 16px;
-      }
-    }
+  .number {
+    font-weight: bold;
+    color: #F0E2C9;
+    font-size: 16px;
   }
+
 }
 </style>
