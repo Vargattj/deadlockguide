@@ -9,7 +9,7 @@
         Vitality
       </button>
       <button class="shop-tab-button" @click="selectShopTab('Tech')" :class="{ active: selectedItemType === 'Tech' }">
-        Spirity
+        Spirit
       </button>
     </nav>
 
@@ -90,7 +90,9 @@ export default {
   .shop-tab-button {
     height: 65px;
     width: 150px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -112,6 +114,24 @@ export default {
     &.active {
       background-color: var(--color-weapon);
     }
+  }
+  .shop-tab-button::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-repeat: no-repeat;
+  }
+  .shop-tab-button:nth-child(1)::before {
+    background-image: url(assets/items/weapon-Icon.png);
+    margin-right: 5px;
+  }
+  .shop-tab-button:nth-child(2)::before {
+    background-image: url(assets/items/vitality-icon.png);
+  }
+  .shop-tab-button:nth-child(3)::before {
+    background-image: url(assets/items/spirit-icon.png);
+    margin-top: 2px;
   }
 }
 
