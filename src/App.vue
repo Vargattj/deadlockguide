@@ -166,8 +166,8 @@ body {
 
 
   .number {
-    font-weight: bold;
-    color: #F0E2C9;
+    font-weight: 600;
+    color: #fefefe;
     font-size: 16px;
   }
 
