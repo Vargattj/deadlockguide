@@ -13,11 +13,11 @@
       </button>
     </nav>
 
-    <div class="shop-itens-wrapper" :data-item-type="selectedItemType.toLocaleLowerCase()">
-      <ItensTierList :itens="getItensByTier('1')" tier="1" />
-      <ItensTierList :itens="getItensByTier('2')" tier="2" />
-      <ItensTierList :itens="getItensByTier('3')" tier="3" />
-      <ItensTierList :itens="getItensByTier('4')" tier="4" />
+    <div class="shop-items-wrapper" :data-item-type="selectedItemType.toLocaleLowerCase()">
+      <itemsTierList :items="getItemsByTier('1')" tier="1" />
+      <itemsTierList :items="getItemsByTier('2')" tier="2" />
+      <itemsTierList :items="getItemsByTier('3')" tier="3" />
+      <itemsTierList :items="getItemsByTier('4')" tier="4" />
     </div>
 
   </div>
@@ -25,9 +25,9 @@
 
 <script>
 import itemsData from '../item-data.json';
-import ItensTierList from './components/itensTierList.vue';
+import itemsTierList from './components/itemsTierList.vue';
 export default {
-  components: { ItensTierList },
+  components: { itemsTierList },
   data() {
     return {
       items: itemsData,
@@ -36,19 +36,19 @@ export default {
     };
   },
   async mounted() {
-    this.getItens()
+    this.getItems()
   },
   methods: {
-    async getItens() {
-      const entriesItens = Object.entries(this.items)
-      const filteredItems = entriesItens.filter(([key, value]) => value.Slot === this.selectedItemType);
+    async getItems() {
+      const entriesItems = Object.entries(this.items)
+      const filteredItems = entriesItems.filter(([key, value]) => value.Slot === this.selectedItemType);
       const filteredAndSortedObject = Object.fromEntries(filteredItems);
       this.shopItems = filteredAndSortedObject;
     },
-    getItensByTier(tier) {
+    getItemsByTier(tier) {
       if (!this.shopItems) return
-      const entriesItens = Object.entries(this.shopItems)
-      const filteredItems = entriesItens.filter(([key, value]) => {
+      const entriesItems = Object.entries(this.shopItems)
+      const filteredItems = entriesItems.filter(([key, value]) => {
         return value.Tier === tier
       });
       return Object.fromEntries(filteredItems);
@@ -56,7 +56,7 @@ export default {
     },
     async selectShopTab(type) {
       this.selectedItemType = type
-      this.getItens()
+      this.getItems()
     }
   }
 };
@@ -135,10 +135,7 @@ export default {
   }
 }
 
-.shop-itens-wrapper {
-  // height: 90vh;
-  // overflow-y: auto;
-  // overflow-x: hidden;
+.shop-items-wrapper {
   border-top: 6px solid var(--color-weapon);
   background-color: #584021;
 

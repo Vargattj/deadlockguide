@@ -4,7 +4,7 @@
             <img :src="getImageSrc('souls_iconColored')" alt="" class="souls-icon">
             {{ tierPrice }}
         </h4>
-        <li v-for="(item, key) in itens" :key="key" class="item"
+        <li v-for="(item, key) in items" :key="key" class="item"
             :class="{ active: item.Activation === 'InstantCast' || item.Activation === 'ActivationPress' }, item.Slot">
             <div class="item-image">
                 <img :src="api + '/' + item.ImagePath" alt="">
@@ -21,7 +21,7 @@
 import ItemInfo from './itemInfo.vue';
 export default {
     components: { ItemInfo },
-    props: { itens: { Object, require: true }, tier: String },
+    props: { items: { Object, require: true }, tier: String },
     data() {
         return {
             api: 'https://cphfjm3dlmb50x2epx8crexh15jpe6.ext-twitch.tv/cphfjm3dlmb50x2epx8crexh15jpe6/1.0.0/7010650a0bdaae3d98829f933ecfbfde',
