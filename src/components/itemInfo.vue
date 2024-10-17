@@ -16,20 +16,20 @@
 
                     <div v-if="item.Description && category != 'Innate'" class="special-effect">
                         <p class="strip">{{ categoryName }}
-                            <span v-if="item.AbilityProperties.AbilityCooldown" class="special-effect-cd">
-                                {{ item.AbilityProperties.AbilityCooldown.value }}s
+                            <span v-if="item.RegularProperties.AbilityCooldown" class="special-effect-cd">
+                                {{ item.RegularProperties.AbilityCooldown.value }}s
                             </span>
                         </p>
                         <p class="special-effect-description" v-html="item.Description"></p>
                     </div>
 
-                    <ul v-if="item.AbilityProperties && Object.keys(item.AbilityProperties).length || item.ElevatedAbilityProperties && Object.keys(item.ElevatedAbilityProperties).length"
+                    <ul v-if="item.RegularProperties && Object.keys(item.RegularProperties).length || item.HighlightedProperties && Object.keys(item.HighlightedProperties).length"
                         class="attributes">
-                        <ItemProperties :abilityProperties="item.ImportantAbilityProperties"
+                        <ItemProperties :abilityProperties="item.SpecialProperties"
                             abilityClass="important-ability" />
-                        <ItemProperties :abilityProperties="item.ElevatedAbilityProperties"
+                        <ItemProperties :abilityProperties="item.HighlightedProperties"
                             abilityClass="highlighted-ability" />
-                        <ItemProperties :abilityProperties="item.AbilityProperties" abilityClass="regular-ability" />
+                        <ItemProperties :abilityProperties="item.RegularProperties" abilityClass="regular-ability" />
                     </ul>
 
 
