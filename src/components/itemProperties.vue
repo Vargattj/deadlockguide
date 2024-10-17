@@ -1,9 +1,7 @@
 <template>
-    <ul>
-        <li v-for="(property, propName) in abilityProperties" :key="propName" :class="abilityClass"
-            :data-style="property.style">
-
-            <span v-if="propName == 'AbilityCooldown'">Cooldown: </span>
+    <ul :class="abilityClass" :data-item-category="itemCategory" v-if="Object.keys(formattedProperties).length"
+        :data-multiple-props="Object.keys(formattedProperties).length > 1">
+        <li v-for="(property, propName) in formattedProperties" :key="propName" :data-style="property.style">
             <p class="property-value">
                 <span class="prefix">
                     {{ getValueByKey(propPrefix, propName) }}
@@ -535,13 +533,22 @@ export default {
         };
     },
     props: {
-        abilityProperties: {
+        properties: {
             type: Object,
             required: true
         },
         abilityClass: {
             type: String,
             required: true
+        },
+        itemCategory: String
+    },
+    computed: {
+        formattedProperties() {
+
+            const { AbilityCooldown, ...rest } = this.properties;
+            console.log('aqui:', AbilityCooldown);
+            return rest;
         }
     },
     methods: {
@@ -555,23 +562,131 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ul {
+
+    [data-item-category='Passive'],
+    [data-item-category='Active'] {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        padding: 8px 16px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+            margin: 4px 0;
+            width: fit-content;
+        }
+    }
+
+    &.special-property {
+        justify-content: center;
+        background-color: transparent;
+        padding: 0;
+        min-height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        width: 100%;
+
+        &[data-multiple-props='false'] {
+            width: calc(33% - 4px);
+
+            &:only-child {
+                width: 100%;
+
+                li {
+                    border-radius: 6px;
+                }
+            }
+
+            li {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &+.regular-ability {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                width: calc(66% - 4px);
+                flex-direction: column;
+                align-items: flex-start;
+
+                li {
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+
+        &[data-multiple-props='true'] {
+            li {
+                border-radius: 0;
+
+                &:first-child {
+                    border-top-left-radius: 6px;
+                }
+
+                &:last-child {
+                    border-top-right-radius: 6px;
+                }
+            }
+
+            &+.regular-ability {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+
+        li {
+            text-align: center;
+            flex-direction: column;
+            gap: 4px;
+            border-radius: 6px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 16px 8px;
+            flex: 1;
+            margin: 0;
+            justify-content: center;
+            height: 100%;
+
+            .property-text {
+                font-size: 16px;
+                filter: brightness(1.2);
+                margin: 0 auto;
+            }
+        }
+
+        [data-style='healing'] .property-text {
+            color: var(--color-armor);
+        }
+
+        [data-style='tech_damage'] .property-text {
+            color: var(--color-spirit);
+        }
+
+        [data-style='bullet_damage'] .property-text {
+            color: var(--color-weapon);
+        }
+    }
+}
+
+ul.highlighted-ability {
+    li .property-text {
+        color: #fefefe;
+        font-weight: 600;
+
+    }
+}
+
 li {
-    margin: 12px 0;
+    margin: 8px 0;
     display: flex;
     width: 100%;
+    margin-bottom: 0;
 
-    &[data-style='healing'].important-ability .property-text{
-            color: var(--color-armor);
-    }
-
-    &[data-style='tech_damage'].important-ability .property-text{
-            color: var(--color-spirit);
-    }
-    &[data-style='bullet_damage'].important-ability .property-text{
-            color: var(--color-weapon);
-    }
-    
-    &.important-ability {
+    &.special-property {
         display: flex;
         flex-direction: column;
         justify-content: center;

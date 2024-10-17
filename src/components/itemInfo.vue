@@ -13,8 +13,7 @@
         <div class="content">
             <div v-for="(category, categoryName) in item.Tooltip" v-if="item.Tooltip" :key="categoryName">
                 <div v-for="(item, index) in category" :key="index" :data-type="categoryName.toLowerCase()">
-
-                    <div v-if="item.Description && category != 'Innate'" class="special-effect">
+                    <div v-if="item.Description && categoryName != 'Innate'" class="special-effect">
                         <p class="strip">{{ categoryName }}
                             <span v-if="item.RegularProperties.AbilityCooldown" class="special-effect-cd">
                                 {{ item.RegularProperties.AbilityCooldown.value }}s
@@ -22,21 +21,17 @@
                         </p>
                         <p class="special-effect-description" v-html="item.Description"></p>
                     </div>
-
-                    <ul v-if="item.RegularProperties && Object.keys(item.RegularProperties).length || item.HighlightedProperties && Object.keys(item.HighlightedProperties).length"
-                        class="attributes">
-                        <ItemProperties :abilityProperties="item.SpecialProperties"
-                            abilityClass="important-ability" />
-                        <ItemProperties :abilityProperties="item.HighlightedProperties"
+                    <div v-if="Object.keys(item.RegularProperties).length || item.HighlightedProperties && Object.keys(item.HighlightedProperties).length || Object.keys(item.SpecialProperties).length"
+                        class="properties">
+                        <ItemProperties :itemCategory="categoryName" :properties="item.SpecialProperties"
+                            abilityClass="special-property" />
+                        <ItemProperties :itemCategory="categoryName" :properties="item.HighlightedProperties"
                             abilityClass="highlighted-ability" />
-                        <ItemProperties :abilityProperties="item.RegularProperties" abilityClass="regular-ability" />
-                    </ul>
-
-
-
+                        <ItemProperties :itemCategory="categoryName" :properties="item.RegularProperties"
+                            abilityClass="regular-ability" />
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
@@ -50,7 +45,7 @@ export default {
     components: { TierItemBonus, ItemProperties },
     data() {
         return {
-        
+
         };
     },
     mounted() {
@@ -127,13 +122,22 @@ export default {
         background-color: rgba(0, 0, 0, .4);
         border-bottom-right-radius: 6px;
         border-bottom-left-radius: 6px;
-        padding-bottom: 10px;
+        padding-bottom: 16px;
 
-        .attributes {
+        >div {
+            margin-top: 16px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .properties {
             text-align: left;
             padding: 8px 16px;
             color: #cecece;
             font-weight: 400;
+            padding-bottom: 0;
         }
 
         .special-effect {
@@ -161,7 +165,7 @@ export default {
             }
 
             .special-effect-description {
-                padding: 12px;
+                padding: 16px;
                 font-weight: 400;
                 line-height: 1.3;
             }
@@ -169,24 +173,20 @@ export default {
 
         [data-type='passive'],
         [data-type='active'] {
-            .attributes {
+            .properties {
                 width: calc(100% - 32px);
                 margin: 0 auto;
                 display: flex;
-                gap: 5px;
+                gap: 4px;
                 padding: 0;
+                flex-wrap: wrap;
+                align-content: center;
 
-                li {
-                    border-radius: 4px;
-                    padding: 16px;
-                    width: 100%;
-                    background-color: rgba(0, 0, 0, 0.2);
-                    min-height: 80px;
-
+                .special-property:has(.special-property:only-child) {
+                    width: 33%;
                 }
             }
         }
-
     }
 
 }

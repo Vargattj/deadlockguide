@@ -115,6 +115,7 @@ export default {
       background-color: var(--color-weapon);
     }
   }
+
   .shop-tab-button::before {
     content: '';
     width: 25px;
@@ -122,13 +123,16 @@ export default {
     display: inline-block;
     background-repeat: no-repeat;
   }
+
   .shop-tab-button:nth-child(1)::before {
     background-image: url(assets/items/weapon-Icon.png);
     margin-right: 5px;
   }
+
   .shop-tab-button:nth-child(2)::before {
     background-image: url(assets/items/vitality-icon.png);
   }
+
   .shop-tab-button:nth-child(3)::before {
     background-image: url(assets/items/spirit-icon.png);
     margin-top: 2px;
@@ -155,6 +159,7 @@ body {
   color: #fef7da;
   background-repeat: no-repeat;
   height: 100%;
+  font-size: 14px;
 
   .main {
     margin: 0 auto;
@@ -163,10 +168,13 @@ body {
 
 
   .number {
-    font-weight: 600;
     color: #fefefe;
     font-size: 16px;
+    font-weight: 600
   }
 
+  .highlight {
+    color: #fefefe;
+  }
 }
 </style>

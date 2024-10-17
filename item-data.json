@@ -7863,12 +7863,7 @@
               "style": "distance",
               "isNegative": false
             },
-            "ChainCount": { "value": "2", "style": null, "isNegative": false },
-            "ChainTickRate": {
-              "value": "0.4",
-              "style": null,
-              "isNegative": false
-            }
+            "ChainCount": { "value": "2", "style": null, "isNegative": false }
           },
           "HighlightedProperties": {},
           "SpecialProperties": {
