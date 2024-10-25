@@ -6358,7 +6358,7 @@
     "ImagePath": "images/upgrades/mods_utility/cloaking_device.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "FireRate", "Movement"],
-    "Tooltipp": {
+    "Tooltip": {
       "Innate": [
         {
           "RegularProperties": {

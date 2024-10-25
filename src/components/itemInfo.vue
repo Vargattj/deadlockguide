@@ -1,5 +1,5 @@
 <template>
-    <div class="item-info" :data-item-type="item.Slot">
+    <div class="item-info" :data-item-type="item.Slot" :data-item-tier="itemTier">
         <div class="header">
             <div class="left">
                 <h3 class="name">{{ item.Name }}</h3>
@@ -14,7 +14,7 @@
             <div v-for="(category, categoryName) in item.Tooltip" v-if="item.Tooltip" :key="categoryName">
                 <div v-for="(item, index) in category" :key="index" :data-type="categoryName.toLowerCase()">
                     <div v-if="item.Description && categoryName != 'Innate'" class="special-effect">
-                        <p class="strip">{{ categoryName }}
+                        <p v-if="index != 1" class="strip">{{ categoryName }}
                             <span v-if="item.RegularProperties.AbilityCooldown" class="special-effect-cd">
                                 {{ item.RegularProperties.AbilityCooldown.value }}s
                             </span>
@@ -41,7 +41,7 @@ import ItemProperties from './itemProperties.vue';
 import TierItemBonus from './tierItemBonus.vue';
 
 export default {
-    props: { item: Object },
+    props: { item: Object, itemTier: String },
     components: { TierItemBonus, ItemProperties },
     data() {
         return {
@@ -50,9 +50,33 @@ export default {
     },
     mounted() {
 
+        this.positionItemInfo()
 
     },
     methods: {
+        positionItemInfo() {
+            const items = document.querySelectorAll('.items > li');
+
+            items.forEach(item => {
+
+                const itemInfoElement = item.querySelector('.item-info') // A referência do item-info correspondente
+                const itemRect = item.getBoundingClientRect(); // Coordenadas do item
+
+                const infoRect = itemInfoElement.getBoundingClientRect(); // Dimensões do item-info
+
+                let left = itemRect.right;
+
+                if (left + infoRect.width > window.innerWidth - 380) {
+                    // Reposiciona para a esquerda do item
+                    left = itemRect.left - infoRect.width;
+
+                    itemInfoElement.setAttribute('data-position-right', true);
+                } else {
+                    itemInfoElement.removeAttribute('data-position-right');
+                }
+            });
+
+        },
         getImageSrc(name) {
             return `src/assets/items/${name.toLowerCase().replace(/ /g, '_')}.png`
         },
@@ -65,19 +89,43 @@ export default {
 
 <style lang="scss">
 .item-info {
-    position: absolute;
-    right: 110%;
-    top: 50%;
-    transform: translateY(-50%);
     border-radius: 6px;
     width: 420px;
     opacity: 0;
     visibility: hidden;
     z-index: 150;
-    transition: .1s;
     color: #F0E2C9;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: #C97A03;
+    transform: translateX(29%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+
+    &[data-position-right] {
+        transform: translateX(-103%) translateY(-50%);
+
+        &[data-item-tier='4'] {
+            top: unset;
+            transform: translateX(-103%) translateY(-100%);
+        }
+
+        &[data-item-tier='1'] {
+            top: 0;
+            transform: translateX(-103%);
+        }
+    }
+
+
+    &[data-item-tier='4'] {
+        top: unset;
+        transform: translateX(29%) translateY(-100%);
+
+    }
+
+    &[data-item-tier='1'] {
+        top: 0;
+        transform: translateX(29%);
+    }
 
     &[data-item-type='Armor'] {
         background-color: #7CBB1E;
@@ -124,11 +172,10 @@ export default {
         border-bottom-left-radius: 6px;
         padding-bottom: 16px;
 
-        >div {
-            margin-top: 16px;
-
-            &:first-child {
-                margin-top: 0;
+        >div:first-child {
+            padding-bottom: 16px;
+            &:only-child{
+                padding-bottom: 0;
             }
         }
 
@@ -140,8 +187,11 @@ export default {
             padding-bottom: 0;
         }
 
+
+
         .special-effect {
             text-align: left;
+            padding-bottom: 16px;
 
             .strip {
                 background-color: #00000080;
@@ -168,6 +218,11 @@ export default {
                 padding: 16px;
                 font-weight: 400;
                 line-height: 1.3;
+                padding-bottom: 0;
+
+                br {
+                    display: none;
+                }
             }
         }
 

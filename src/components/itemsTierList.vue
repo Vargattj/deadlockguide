@@ -1,10 +1,10 @@
 <template>
-    <ul class="items" :data-tier="tier">
+    <ul class="items">
         <h4 class="tier-price">
             <img :src="getImageSrc('souls_iconColored')" alt="" class="souls-icon">
             {{ tierPrice }}
         </h4>
-        <li v-for="(item, key) in items" :key="key" class="item"
+        <li v-for="(item, itemName, key) in items" :key="itemName" class="item"
             :class="{ active: item.Activation === 'InstantCast' || item.Activation === 'ActivationPress' }, item.Slot">
             <div class="item-image">
                 <img :src="api + '/' + item.ImagePath" alt="">
@@ -12,13 +12,15 @@
                     v-if="item.Activation === 'InstantCast' || item.Activation === 'ActivationPress'">ACTIVE</span>
             </div>
             <h2>{{ item.Name }}</h2>
-            <ItemInfo :item="item" />
+            <ItemInfo :itemTier="tier" :ref="'itemInfo'" :item="item" />
         </li>
     </ul>
 </template>
 
 <script>
 import ItemInfo from './itemInfo.vue';
+import { ref } from 'vue';
+
 export default {
     components: { ItemInfo },
     props: { items: { Object, require: true }, tier: String },
@@ -27,6 +29,7 @@ export default {
             api: 'https://cphfjm3dlmb50x2epx8crexh15jpe6.ext-twitch.tv/cphfjm3dlmb50x2epx8crexh15jpe6/1.0.0/7010650a0bdaae3d98829f933ecfbfde',
         };
     },
+
     computed: {
         tierPrice() {
             if (this.tier == '2') return '1,250'
@@ -35,7 +38,11 @@ export default {
             return '500'
         }
     },
+    mounted() {
+    },
     methods: {
+  
+
         getImageSrc(name) {
             return `src/assets/items/${name.toLowerCase().replace(/ /g, '_')}.png`
         },
@@ -47,14 +54,15 @@ export default {
 .items {
     display: grid;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     grid-template-columns: repeat(9, 1fr);
     position: relative;
     padding: 16px 56px;
-    &:nth-child(even){
-         background-color:rgba(0, 0, 0, 0.15)
-     } 
-  
+
+    &:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.15)
+    }
+
 
     .tier-price {
         color: #98ffde;
@@ -68,6 +76,7 @@ export default {
         transform: translateY(-50%) rotate(-90deg);
         font-size: 22px;
         width: 55px;
+
         .souls-icon {
             width: 18px;
             margin-right: 5px;
@@ -85,8 +94,8 @@ export default {
         font-family: sans-serif;
         position: relative;
         cursor: pointer;
-        transition: transform .2s;
-
+        transition: ease-out transform .2s;
+        
         &.Armor .item-image {
             background-color: #7CBB1E;
         }
@@ -147,7 +156,7 @@ export default {
 
         &:nth-child(-n+3) {
             .item-info {
-                left: 110%;
+                // left: 110%;
             }
         }
 

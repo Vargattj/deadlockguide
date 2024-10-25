@@ -142,6 +142,9 @@ export default {
 .shop-items-wrapper {
   border-top: 6px solid var(--color-weapon);
   background-color: #584021;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   &[data-item-type='armor'] {
     background-color: #325008;
@@ -153,6 +156,10 @@ export default {
     border-top: 6px solid var(--color-spirit);
   }
 
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body {

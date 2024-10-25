@@ -547,7 +547,6 @@ export default {
         formattedProperties() {
 
             const { AbilityCooldown, ...rest } = this.properties;
-            console.log('aqui:', AbilityCooldown);
             return rest;
         }
     },
