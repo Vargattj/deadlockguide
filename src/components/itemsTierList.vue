@@ -1,13 +1,13 @@
 <template>
     <ul class="items">
         <h4 class="tier-price">
-            <img :src="getImageSrc('souls_iconColored')" alt="" class="souls-icon">
+            <img src="../assets/icons/icon_souls.png" alt="" class="souls-icon">
             {{ tierPrice }}
         </h4>
         <li v-for="(item, itemName, key) in items" :key="itemName" class="item"
             :class="{ active: item.Activation === 'InstantCast' || item.Activation === 'ActivationPress' }, item.Slot">
             <div class="item-image">
-                <img :src="api + '/' + item.ImagePath" alt="">
+                <img :src="item.ImagePath" :alt="item.Name">
                 <span class="active-tag"
                     v-if="item.Activation === 'InstantCast' || item.Activation === 'ActivationPress'">ACTIVE</span>
             </div>
@@ -26,7 +26,6 @@ export default {
     props: { items: { Object, require: true }, tier: String },
     data() {
         return {
-            api: 'https://cphfjm3dlmb50x2epx8crexh15jpe6.ext-twitch.tv/cphfjm3dlmb50x2epx8crexh15jpe6/1.0.0/7010650a0bdaae3d98829f933ecfbfde',
         };
     },
 
@@ -41,11 +40,6 @@ export default {
     mounted() {
     },
     methods: {
-  
-
-        getImageSrc(name) {
-            return `src/assets/items/${name.toLowerCase().replace(/ /g, '_')}.png`
-        },
     }
 };
 </script>

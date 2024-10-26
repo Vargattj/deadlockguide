@@ -4,52 +4,55 @@
             <div class="left">
                 <h3 class="name">{{ item.Name }}</h3>
                 <h4 class="price">
-                    <img :src="getImageSrc('souls_iconColored')" alt="" class="souls-icon">
+                    <img src="../assets/icons/icon_souls.png" alt="" class="souls-icon">
                     {{ item.Cost }}
                 </h4>
             </div>
             <TierItemBonus :tier="item.Tier" :type="item.Slot" />
         </div>
+        <ItemComponents :itemtype="item.Slot" mode="has" :component="item.Components" />
+
         <div class="content">
             <div v-for="(category, categoryName) in item.Tooltip" v-if="item.Tooltip" :key="categoryName">
-                <div v-for="(item, index) in category" :key="index" :data-type="categoryName.toLowerCase()">
-                    <div v-if="item.Description && categoryName != 'Innate'" class="special-effect">
+                <div v-for="(properties, index) in category" :key="index" :data-type="categoryName.toLowerCase()">
+                    <div v-if="properties.Description && categoryName != 'Innate'" class="special-effect">
                         <p v-if="index != 1" class="strip">{{ categoryName }}
-                            <span v-if="item.RegularProperties.AbilityCooldown" class="special-effect-cd">
-                                {{ item.RegularProperties.AbilityCooldown.value }}s
+                            <span v-if="properties.RegularProperties.AbilityCooldown" class="special-effect-cd">
+                                {{ properties.RegularProperties.AbilityCooldown.value }}s
                             </span>
                         </p>
-                        <p class="special-effect-description" v-html="item.Description"></p>
+                        <p class="special-effect-description" v-html="properties.Description"></p>
                     </div>
-                    <div v-if="Object.keys(item.RegularProperties).length || item.HighlightedProperties && Object.keys(item.HighlightedProperties).length || Object.keys(item.SpecialProperties).length"
+                    <div v-if="Object.keys(properties.RegularProperties).length || properties.HighlightedProperties && Object.keys(properties.HighlightedProperties).length || Object.keys(properties.SpecialProperties).length"
                         class="properties">
-                        <ItemProperties :itemCategory="categoryName" :properties="item.SpecialProperties"
+                        <ItemProperties :itemCategory="categoryName" :properties="properties.SpecialProperties"
                             abilityClass="special-property" />
-                        <ItemProperties :itemCategory="categoryName" :properties="item.HighlightedProperties"
+                        <ItemProperties :itemCategory="categoryName" :properties="properties.HighlightedProperties"
                             abilityClass="highlighted-ability" />
-                        <ItemProperties :itemCategory="categoryName" :properties="item.RegularProperties"
+                        <ItemProperties :itemCategory="categoryName" :properties="properties.RegularProperties"
                             abilityClass="regular-ability" />
                     </div>
                 </div>
             </div>
         </div>
+        <ItemComponents mode="is" :itemtype="item.Slot" :component="item.isComponent" />
     </div>
 </template>
 
 <script>
+import ItemComponents from './itemComponents.vue';
 import ItemProperties from './itemProperties.vue';
 import TierItemBonus from './tierItemBonus.vue';
 
 export default {
     props: { item: Object, itemTier: String },
-    components: { TierItemBonus, ItemProperties },
+    components: { TierItemBonus, ItemProperties, ItemComponents },
     data() {
         return {
 
         };
     },
     mounted() {
-
         this.positionItemInfo()
 
     },
@@ -59,15 +62,13 @@ export default {
 
             items.forEach(item => {
 
-                const itemInfoElement = item.querySelector('.item-info') // A referência do item-info correspondente
-                const itemRect = item.getBoundingClientRect(); // Coordenadas do item
-
-                const infoRect = itemInfoElement.getBoundingClientRect(); // Dimensões do item-info
+                const itemInfoElement = item.querySelector('.item-info') 
+                const itemRect = item.getBoundingClientRect(); 
+                const infoRect = itemInfoElement.getBoundingClientRect(); 
 
                 let left = itemRect.right;
 
                 if (left + infoRect.width > window.innerWidth - 380) {
-                    // Reposiciona para a esquerda do item
                     left = itemRect.left - infoRect.width;
 
                     itemInfoElement.setAttribute('data-position-right', true);
@@ -159,8 +160,8 @@ export default {
             display: flex;
             align-items: center;
 
-            img {
-                width: 12px;
+            .souls-icon {
+                width: 16px;
                 margin-right: 4px;
             }
         }
@@ -168,13 +169,21 @@ export default {
 
     .content {
         background-color: rgba(0, 0, 0, .4);
-        border-bottom-right-radius: 6px;
-        border-bottom-left-radius: 6px;
         padding-bottom: 16px;
 
-        >div:first-child {
-            padding-bottom: 16px;
-            &:only-child{
+        &:last-child {
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+        >div {
+            &:first-child{
+                padding-bottom: 16px;
+            }
+            &:last-child{
+            }
+
+            &:only-child {
                 padding-bottom: 0;
             }
         }

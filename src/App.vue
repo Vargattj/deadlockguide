@@ -3,12 +3,15 @@
     <nav class="shop-tabs" :data-item-type="selectedItemType.toLocaleLowerCase()">
       <button class="shop-tab-button" @click="selectShopTab('Weapon')"
         :class="{ active: selectedItemType === 'Weapon' }">
+        <img src="./assets/icons/icon_weapon.svg" alt="icon-weapon">
         Weapon
       </button>
       <button class="shop-tab-button" @click="selectShopTab('Armor')" :class="{ active: selectedItemType === 'Armor' }">
+        <img src="./assets/icons/icon_armor.svg" alt="icon-armor">
         Vitality
       </button>
       <button class="shop-tab-button" @click="selectShopTab('Tech')" :class="{ active: selectedItemType === 'Tech' }">
+        <img src="./assets/icons/icon_spirit.svg" alt="icon-spirit">
         Spirit
       </button>
     </nav>
@@ -103,6 +106,13 @@ export default {
     cursor: pointer;
     border-top: 5px solid var(--color-weapon);
 
+    >img {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) saturate(100%) invert(12%) sepia(9%) saturate(4980%) hue-rotate(4deg) brightness(94%) contrast(93%);
+      margin-right: 8px;
+    }
+
     &:nth-of-type(2) {
       border-color: var(--color-armor);
     }
@@ -116,27 +126,9 @@ export default {
     }
   }
 
-  .shop-tab-button::before {
-    content: '';
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    background-repeat: no-repeat;
-  }
 
-  .shop-tab-button:nth-child(1)::before {
-    background-image: url(assets/items/weapon-Icon.png);
-    margin-right: 5px;
-  }
 
-  .shop-tab-button:nth-child(2)::before {
-    background-image: url(assets/items/vitality-icon.png);
-  }
 
-  .shop-tab-button:nth-child(3)::before {
-    background-image: url(assets/items/spirit-icon.png);
-    margin-top: 2px;
-  }
 }
 
 .shop-items-wrapper {
