@@ -138,6 +138,7 @@ export default {
                 "MaxHealthLossPercent": "Max Health",
                 "MaxStacks": "Max Stacks",
                 "MeleeDistanceScale": "Heavy Melee distance",
+                "MeleeResistPercent": "Melee Resist",
                 "MovementSpeedBonusDuration": "Move Speed Duration",
                 "MovementSpeedSlow": "Movement Slow",
                 "NonImbuedBonusDuration": "Non-Imbued Ability Duration",
@@ -149,6 +150,7 @@ export default {
                 "ProcBonusMagicDamage": "Spirit Damage",
                 "ProcChance": "Proc Chance",
                 "ProcCooldown": "Max Frequency Per Target",
+                "PulseRate": "Pulse Rate",
                 "Radius": "Radius",
                 "RegenDuration": "Regen Duration",
                 "ReloadSpeedMultipler": "Reload Time",
@@ -307,6 +309,7 @@ export default {
                 "MaxHealthLossPercent": "%",
                 "MaxStacks": "",
                 "MeleeDistanceScale": "%",
+                "MeleeResistPercent": "%",
                 "MovementSpeedBonusDuration": "s",
                 "MovementSpeedSlow": "%",
                 "NonImbuedBonusDuration": "%",
@@ -318,6 +321,7 @@ export default {
                 "ProcBonusMagicDamage": "",
                 "ProcChance": "%",
                 "ProcCooldown": "s",
+                "PulseRate": "s",
                 "Radius": "",
                 "RegenDuration": "s",
                 "ReloadSpeedMultipler": "%",
@@ -476,6 +480,7 @@ export default {
                 "MaxHealthLossPercent": "",
                 "MaxStacks": "",
                 "MeleeDistanceScale": "+",
+                "MeleeResistPercent": "+",
                 "MovementSpeedBonusDuration": "",
                 "MovementSpeedSlow": "",
                 "NonImbuedBonusDuration": "+",
@@ -487,6 +492,7 @@ export default {
                 "ProcBonusMagicDamage": "+",
                 "ProcChance": "",
                 "ProcCooldown": "",
+                "PulseRate": "",
                 "Radius": "",
                 "RegenDuration": "",
                 "ReloadSpeedMultipler": "",
@@ -545,7 +551,6 @@ export default {
     },
     computed: {
         formattedProperties() {
-
             const { AbilityCooldown, ...rest } = this.properties;
             return rest;
         }
@@ -612,6 +617,7 @@ ul {
                 width: calc(66% - 4px);
                 flex-direction: column;
                 align-items: flex-start;
+                justify-content: flex-start;
 
                 li {
                     flex-wrap: nowrap;

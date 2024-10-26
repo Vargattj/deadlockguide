@@ -18,6 +18,7 @@
                     <div v-if="properties.Description && categoryName != 'Innate'" class="special-effect">
                         <p v-if="index != 1" class="strip">{{ categoryName }}
                             <span v-if="properties.RegularProperties.AbilityCooldown" class="special-effect-cd">
+                                <img src="../assets/icons/icon_cooldown.svg" alt="">
                                 {{ properties.RegularProperties.AbilityCooldown.value }}s
                             </span>
                         </p>
@@ -180,9 +181,7 @@ export default {
             &:first-child{
                 padding-bottom: 16px;
             }
-            &:last-child{
-            }
-
+           
             &:only-child {
                 padding-bottom: 0;
             }
@@ -191,7 +190,6 @@ export default {
         .properties {
             text-align: left;
             padding: 8px 16px;
-            color: #cecece;
             font-weight: 400;
             padding-bottom: 0;
         }
@@ -219,8 +217,16 @@ export default {
                 padding: 6px;
                 width: 30%;
                 text-align: center;
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 font-weight: bold;
+                color: #cecece;
+                img{
+                    margin-right: 4px;
+                    width: 15px;
+                    height: 15px;
+                }
             }
 
             .special-effect-description {

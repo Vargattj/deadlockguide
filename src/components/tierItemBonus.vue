@@ -1,7 +1,10 @@
 <template>
-    <div class="tier-item-bonus">
+    <div :data-item-type="type" class="tier-item-bonus">
         <div class="top">
-            {{ tierBonus }}
+            <span v-html="highlightNumbers(tierBonus)"></span>
+
+            <img class="icon" :src="iconSrc" alt="icon-weapon">
+
         </div>
         <div class="bottom">
             <span class="tier-bonus-text">
@@ -34,13 +37,20 @@ export default {
             if (this.type === 'Armor') return 'Base Health'
             if (this.type === 'Tech') return 'Spirit Power'
             return 'Weapon damage'
-
+        },
+        iconSrc() {
+            let iconType = this.type.toLowerCase();
+            if (this.type == 'Tech') iconType = 'spirit'
+            return `src/assets/icons/icon_${iconType}.svg`
         }
     },
     mounted() {
 
     },
     methods: {
+        highlightNumbers(text) {
+            return text.replace(/(\d+)/g, '<span class="highlighted-number">$1</span>');
+        }
     }
 };
 </script>
@@ -54,6 +64,28 @@ export default {
         padding: 6px;
         background-color: #0000004d;
         font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            margin-left: 3px;
+            filter: var(--weapon-filter);
+        }
+    }
+
+    &[data-item-type='Armor'] {
+        .top .icon {
+            filter: var(--armor-filter);
+        }
+    }
+
+    &[data-item-type='Tech'] {
+        .top .icon {
+            filter: var(--spirit-filter);
+        }
     }
 
     .bottom {

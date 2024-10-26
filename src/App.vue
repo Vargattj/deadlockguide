@@ -71,7 +71,10 @@ export default {
   --color-armor: #7CBB1E;
   --color-spirit: #CE91FF;
   --color-primary: #170C00;
-  --color-secondary: #F0E2C9
+  --color-secondary: #F0E2C9;
+  --weapon-filter: brightness(0) saturate(100%) invert(59%) sepia(91%) saturate(456%) hue-rotate(350deg) brightness(94%) contrast(96%);
+  --spirit-filter: brightness(0) saturate(100%) invert(57%) sepia(43%) saturate(1987%) hue-rotate(221deg) brightness(110%) contrast(101%);
+  --armor-filter: brightness(0) saturate(100%) invert(56%) sepia(97%) saturate(375%) hue-rotate(42deg) brightness(96%) contrast(88%);
 }
 
 .shop-tabs {
@@ -127,8 +130,6 @@ export default {
   }
 
 
-
-
 }
 
 .shop-items-wrapper {
@@ -172,7 +173,8 @@ body {
     font-weight: 600
   }
 
-  .highlight {
+  .highlight,
+  .highlighted-number {
     color: #fefefe;
   }
 }
