@@ -8,7 +8,7 @@
             :class="{ active: item.Activation === 'InstantCast' || item.Activation === 'ActivationPress' }, item.Slot">
             <div class="item-image">
                 <!-- <img :src='getImageUrl(item.ImagePath)' :alt="item.Name"> -->
-                <NuxtImg
+                <img
                     :src="'assets/items/' + item.ImagePath"
                     class="rounded"
                 />
@@ -59,7 +59,8 @@ export default {
     grid-template-columns: repeat(9, 1fr);
     position: relative;
     padding: 16px 56px;
-
+    min-height: 150px;
+    min-width: 60vw;
     &:nth-child(even) {
         background-color: rgba(0, 0, 0, 0.15)
     }
@@ -96,7 +97,6 @@ export default {
         position: relative;
         cursor: pointer;
         transition: ease-out transform .2s;
-        
         &.Armor .item-image {
             background-color: #7CBB1E;
         }

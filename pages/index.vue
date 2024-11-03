@@ -76,11 +76,13 @@ export default {
   --spirit-filter: brightness(0) saturate(100%) invert(57%) sepia(43%) saturate(1987%) hue-rotate(221deg) brightness(110%) contrast(101%);
   --armor-filter: brightness(0) saturate(100%) invert(56%) sepia(97%) saturate(375%) hue-rotate(42deg) brightness(96%) contrast(88%);
 }
-body{
+
+body {
   background-image: url('deadlock.avif');
   display: flex;
   justify-content: center;
 }
+
 .shop-tabs {
   display: flex;
   gap: 12px;
@@ -142,7 +144,6 @@ body{
   max-height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
-
   &[data-item-type='armor'] {
     background-color: #325008;
     border-top: 6px solid var(--color-armor);
