@@ -78,7 +78,7 @@ export default {
 }
 
 body {
-  background-image: url('deadlock.avif');
+  background-image: url('/assets/deadlock.avif');
   display: flex;
   justify-content: center;
 }
