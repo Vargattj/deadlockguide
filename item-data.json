@@ -7,7 +7,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/deployable_bullet_shield.png",
+    "ImagePath": "./deployable_bullet_shield.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage"],
     "Tooltip": {
@@ -88,7 +88,7 @@
     "Activation": "ActivationPress",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/thermal_detonator.png",
+    "ImagePath": "thermal_detonator.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["WeaponDamage", "MagicDamage"],
     "Tooltip": {
@@ -186,7 +186,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/ammo_scavenger.png",
+    "ImagePath": "ammo_scavenger.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "ClipSize"],
     "Tooltip": {
@@ -264,7 +264,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/clip_size.png",
+    "ImagePath": "clip_size.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "ClipSize"],
     "Tooltip": {
@@ -314,7 +314,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/berserker.png",
+    "ImagePath": "berserker.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "ClipSize", "Durability"],
     "Tooltip": {
@@ -393,7 +393,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_soaring_spirit"],
-    "ImagePath": "src/assets/items/boundless_spirit.png",
+    "ImagePath": "boundless_spirit.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Movement", "Healing"],
     "Tooltip": {
@@ -456,7 +456,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/bullet_armor.png",
+    "ImagePath": "bullet_armor.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Durability"],
     "Tooltip": {
@@ -506,7 +506,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/health_stealing_bullets.png",
+    "ImagePath": "health_stealing_bullets.png",
     "TargetTypes": null,
     "ShopFilters": ["Durability", "Healing"],
     "Tooltip": {
@@ -556,7 +556,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/bullet_resist_shredder.png",
+    "ImagePath": "bullet_resist_shredder.png",
     "TargetTypes": ["HeroEnemy", "CreepEnemy", "MinionEnemy"],
     "ShopFilters": ["WeaponDamage", "Durability"],
     "Tooltip": {
@@ -626,7 +626,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/fire_rate_plus_plus.png",
+    "ImagePath": "fire_rate_plus_plus.png",
     "TargetTypes": null,
     "ShopFilters": ["FireRate"],
     "Tooltip": {
@@ -719,7 +719,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/close_range.png",
+    "ImagePath": "close_range.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Durability"],
     "Tooltip": {
@@ -784,7 +784,7 @@
     "Activation": "InstantCast",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/ice_blast.png",
+    "ImagePath": "ice_blast.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Disruption", "Durability"],
     "Tooltip": {
@@ -864,7 +864,7 @@
     "Activation": "InstantCast",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/colossus.png",
+    "ImagePath": "colossus.png",
     "TargetTypes": null,
     "ShopFilters": ["Durability"],
     "Tooltip": {
@@ -966,7 +966,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/bullet_shield.png",
+    "ImagePath": "bullet_shield.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Durability"],
     "Tooltip": {
@@ -1030,7 +1030,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/banshee_slugs.png",
+    "ImagePath": "banshee_slugs.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Disruption"],
     "Tooltip": {
@@ -1113,7 +1113,7 @@
     "Activation": "ActivationPress",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/glitch.png",
+    "ImagePath": "glitch.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["Disruption", "WeaponDamage"],
     "Tooltip": {
@@ -1189,7 +1189,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/debuff_reducer.png",
+    "ImagePath": "debuff_reducer.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage"],
     "Tooltip": {
@@ -1253,7 +1253,7 @@
     "Activation": "InstantCast",
     "Slot": "Armor",
     "Components": ["upgrade_debuff_reducer"],
-    "ImagePath": "src/assets/items/debuff_remover.png",
+    "ImagePath": "debuff_remover.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage"],
     "Tooltip": {
@@ -1343,7 +1343,7 @@
     "Activation": "ActivationPress",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/rupture.png",
+    "ImagePath": "rupture.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["MagicDamage", "Disruption"],
     "Tooltip": {
@@ -1424,7 +1424,7 @@
     "Activation": "ActivationPress",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/savior.png",
+    "ImagePath": "savior.png",
     "TargetTypes": ["HeroFriendly"],
     "ShopFilters": ["Durability", "Movement"],
     "Tooltip": {
@@ -1524,7 +1524,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/bullet_shield.png",
+    "ImagePath": "bullet_shield.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Durability", "Healing"],
     "Tooltip": {
@@ -1611,7 +1611,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/duration_extender.png",
+    "ImagePath": "duration_extender.png",
     "TargetTypes": null,
     "ShopFilters": null,
     "Tooltip": {
@@ -1673,7 +1673,7 @@
     "Activation": "InstantCast",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/echo_shard.png",
+    "ImagePath": "echo_shard.png",
     "TargetTypes": null,
     "ShopFilters": ["Movement", "MagicDamage"],
     "Tooltip": {
@@ -1737,7 +1737,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/tech_shield_pulse.png",
+    "ImagePath": "tech_shield_pulse.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -1801,7 +1801,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": ["upgrade_sprint_booster"],
-    "ImagePath": "src/assets/items/sprint_booster.png",
+    "ImagePath": "sprint_booster.png",
     "TargetTypes": null,
     "ShopFilters": ["Movement", "Durability"],
     "Tooltip": {
@@ -1878,7 +1878,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/resilience.png",
+    "ImagePath": "resilience.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -1932,7 +1932,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_magic_vulnerability"],
-    "ImagePath": "src/assets/items/escalating_exposure.png",
+    "ImagePath": "escalating_exposure.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -2012,7 +2012,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/bullet_armor_plus.png",
+    "ImagePath": "bullet_armor_plus.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Durability", "FireRate"],
     "Tooltip": {
@@ -2089,7 +2089,7 @@
     "Activation": "InstantCast",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/shifting_shroud.png",
+    "ImagePath": "shifting_shroud.png",
     "TargetTypes": null,
     "ShopFilters": ["FireRate"],
     "Tooltip": {
@@ -2172,7 +2172,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/extra_charge.png",
+    "ImagePath": "extra_charge.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage"],
     "Tooltip": {
@@ -2229,7 +2229,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/health.png",
+    "ImagePath": "health.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Durability"],
     "Tooltip": {
@@ -2279,7 +2279,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/endurance.png",
+    "ImagePath": "endurance.png",
     "TargetTypes": null,
     "ShopFilters": ["ClipSize", "Healing"],
     "Tooltip": {
@@ -2329,7 +2329,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/tech_damage.png",
+    "ImagePath": "tech_damage.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Healing"],
     "Tooltip": {
@@ -2380,7 +2380,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/improved_stamina.png",
+    "ImagePath": "improved_stamina.png",
     "TargetTypes": null,
     "ShopFilters": ["FireRate", "Movement"],
     "Tooltip": {
@@ -2437,7 +2437,7 @@
     "Activation": "InstantCast",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/fleetfoot_boots.png",
+    "ImagePath": "fleetfoot_boots.png",
     "TargetTypes": null,
     "ShopFilters": ["ClipSize", "Movement"],
     "Tooltip": {
@@ -2529,7 +2529,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": ["upgrade_health"],
-    "ImagePath": "src/assets/items/revitalizer.png",
+    "ImagePath": "revitalizer.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Durability", "Healing", "Movement"],
     "Tooltip": {
@@ -2602,7 +2602,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/fervor.png",
+    "ImagePath": "fervor.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "FireRate", "ClipSize", "Movement"],
     "Tooltip": {
@@ -2686,7 +2686,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/glass_cannon.png",
+    "ImagePath": "glass_cannon.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "ClipSize", "FireRate"],
     "Tooltip": {
@@ -2765,7 +2765,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": ["upgrade_headshot_booster"],
-    "ImagePath": "src/assets/items/headhunter.png",
+    "ImagePath": "headhunter.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage"],
     "Tooltip": {
@@ -2859,7 +2859,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/headshot_booster.png",
+    "ImagePath": "headshot_booster.png",
     "TargetTypes": null,
     "ShopFilters": ["Durability", "FireRate"],
     "Tooltip": {
@@ -2929,7 +2929,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/healbane.png",
+    "ImagePath": "healbane.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["Healing", "Disruption", "Durability"],
     "Tooltip": {
@@ -3000,7 +3000,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/healing_booster.png",
+    "ImagePath": "healing_booster.png",
     "TargetTypes": null,
     "ShopFilters": ["Healing"],
     "Tooltip": {
@@ -3060,7 +3060,7 @@
     "Activation": "InstantCast",
     "Slot": "Armor",
     "Components": ["upgrade_health_stimpak"],
-    "ImagePath": "src/assets/items/health_nova.png",
+    "ImagePath": "health_nova.png",
     "TargetTypes": ["AllFriendly"],
     "ShopFilters": ["Healing"],
     "Tooltip": {
@@ -3144,7 +3144,7 @@
     "Activation": "ActivationPress",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/stimpak.png",
+    "ImagePath": "stimpak.png",
     "TargetTypes": ["HeroFriendly"],
     "ShopFilters": ["Healing"],
     "Tooltip": {
@@ -3226,7 +3226,7 @@
     "Activation": "InstantCast",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/bullet_damage_aura.png",
+    "ImagePath": "bullet_damage_aura.png",
     "TargetTypes": ["AllFriendly"],
     "ShopFilters": ["FireRate", "Healing", "Movement"],
     "Tooltip": {
@@ -3341,7 +3341,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/high_velocity_mag.png",
+    "ImagePath": "high_velocity_mag.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage"],
     "Tooltip": {
@@ -3396,7 +3396,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/hollow_point.png",
+    "ImagePath": "hollow_point.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -3456,7 +3456,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/bullet_armor_reduction_aura.png",
+    "ImagePath": "bullet_armor_reduction_aura.png",
     "TargetTypes": ["HeroEnemy", "CreepEnemy", "MinionEnemy"],
     "ShopFilters": ["WeaponDamage", "Disruption", "ClipSize"],
     "Tooltip": {
@@ -3528,7 +3528,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": ["upgrade_bullet_armor"],
-    "ImagePath": "src/assets/items/improved_bullet_armor.png",
+    "ImagePath": "improved_bullet_armor.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Durability"],
     "Tooltip": {
@@ -3578,7 +3578,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_magic_burst"],
-    "ImagePath": "src/assets/items/magic_shock.png",
+    "ImagePath": "magic_shock.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Disruption"],
     "Tooltip": {
@@ -3644,7 +3644,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/advanced_recharge.png",
+    "ImagePath": "advanced_recharge.png",
     "TargetTypes": null,
     "ShopFilters": ["Healing"],
     "Tooltip": {
@@ -3700,7 +3700,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_magic_reach"],
-    "ImagePath": "src/assets/items/spiritual_dominion.png",
+    "ImagePath": "spiritual_dominion.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -3759,7 +3759,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_improved_spirit"],
-    "ImagePath": "src/assets/items/soaring_spirit.png",
+    "ImagePath": "soaring_spirit.png",
     "TargetTypes": null,
     "ShopFilters": ["Movement", "MagicDamage"],
     "Tooltip": {
@@ -3816,7 +3816,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": ["upgrade_tech_armor"],
-    "ImagePath": "src/assets/items/tech_purge.png",
+    "ImagePath": "tech_purge.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -3865,7 +3865,7 @@
     "Activation": "InstantCast",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/infuser.png",
+    "ImagePath": "infuser.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage"],
     "Tooltip": {
@@ -3946,7 +3946,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/inhibitor.png",
+    "ImagePath": "inhibitor.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["WeaponDamage", "Disruption", "FireRate"],
     "Tooltip": {
@@ -4023,7 +4023,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/auto_reloader.png",
+    "ImagePath": "auto_reloader.png",
     "TargetTypes": null,
     "ShopFilters": ["ClipSize", "WeaponDamage"],
     "Tooltip": {
@@ -4093,7 +4093,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/kinetic_sash.png",
+    "ImagePath": "kinetic_sash.png",
     "TargetTypes": null,
     "ShopFilters": ["FireRate", "ClipSize", "Movement", "Durability"],
     "Tooltip": {
@@ -4174,7 +4174,7 @@
     "Activation": "ActivationPress",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/knockdown.png",
+    "ImagePath": "knockdown.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["MagicDamage", "Disruption"],
     "Tooltip": {
@@ -4253,7 +4253,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/leech.png",
+    "ImagePath": "leech.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Healing"],
     "Tooltip": {
@@ -4321,7 +4321,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": ["upgrade_lifestrike_gauntlets"],
-    "ImagePath": "src/assets/items/boxing_glove.png",
+    "ImagePath": "boxing_glove.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["Durability", "Melee", "Healing"],
     "Tooltip": {
@@ -4406,7 +4406,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/long_range.png",
+    "ImagePath": "long_range.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "ClipSize"],
     "Tooltip": {
@@ -4477,7 +4477,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/crit_damage.png",
+    "ImagePath": "crit_damage.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["WeaponDamage", "ClipSize"],
     "Tooltip": {
@@ -4551,7 +4551,7 @@
     "Activation": "InstantCast",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/ice_path.png",
+    "ImagePath": "ice_path.png",
     "TargetTypes": null,
     "ShopFilters": ["Movement"],
     "Tooltip": {
@@ -4646,7 +4646,7 @@
     "Activation": "InstantCast",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/lash_death_slam.png",
+    "ImagePath": "lash_death_slam.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["Movement"],
     "Tooltip": {
@@ -4720,7 +4720,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/melee_charge.png",
+    "ImagePath": "melee_charge.png",
     "TargetTypes": ["HeroEnemy", "TrooperEnemy", "MinionEnemy", "Neutral"],
     "ShopFilters": ["Melee"],
     "Tooltip": {
@@ -4802,7 +4802,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/lifestrike_gauntlets.png",
+    "ImagePath": "lifestrike_gauntlets.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["Durability", "Melee", "Healing"],
     "Tooltip": {
@@ -4868,7 +4868,7 @@
     "Activation": "InstantCast",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/metal_skin.png",
+    "ImagePath": "metal_skin.png",
     "TargetTypes": null,
     "ShopFilters": ["Durability", "FireRate"],
     "Tooltip": {
@@ -4941,7 +4941,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/reaper_rounds.png",
+    "ImagePath": "reaper_rounds.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Durability", "Healing"],
     "Tooltip": {
@@ -5003,7 +5003,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/magic_burst.png",
+    "ImagePath": "magic_burst.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Healing"],
     "Tooltip": {
@@ -5074,7 +5074,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/tech_range.png",
+    "ImagePath": "tech_range.png",
     "TargetTypes": null,
     "ShopFilters": null,
     "Tooltip": {
@@ -5121,7 +5121,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/magic_reverb.png",
+    "ImagePath": "magic_reverb.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Healing"],
     "Tooltip": {
@@ -5213,7 +5213,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/explosive_bullets.png",
+    "ImagePath": "explosive_bullets.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["WeaponDamage", "MagicDamage"],
     "Tooltip": {
@@ -5286,7 +5286,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_suppressor"],
-    "ImagePath": "src/assets/items/slowing_tech.png",
+    "ImagePath": "slowing_tech.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["Disruption"],
     "Tooltip": {
@@ -5363,7 +5363,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/tech_vulnerability.png",
+    "ImagePath": "tech_vulnerability.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Disruption"],
     "Tooltip": {
@@ -5423,7 +5423,7 @@
     "Activation": "ActivationPress",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/phantom_strike.png",
+    "ImagePath": "phantom_strike.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["WeaponDamage", "Durability", "Movement", "Disruption"],
     "Tooltip": {
@@ -5510,7 +5510,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": ["upgrade_close_range"],
-    "ImagePath": "src/assets/items/point_blank.png",
+    "ImagePath": "point_blank.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["WeaponDamage", "Durability", "Disruption"],
     "Tooltip": {
@@ -5589,7 +5589,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": ["upgrade_high_velocity_mag"],
-    "ImagePath": "src/assets/items/pristine_emblem.png",
+    "ImagePath": "pristine_emblem.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -5661,7 +5661,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/fire_rate_plus.png",
+    "ImagePath": "fire_rate_plus.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "FireRate"],
     "Tooltip": {
@@ -5718,7 +5718,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_extra_charge"],
-    "ImagePath": "src/assets/items/rapid_recharge.png",
+    "ImagePath": "rapid_recharge.png",
     "TargetTypes": null,
     "ShopFilters": null,
     "Tooltip": {
@@ -5779,7 +5779,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/rapid_rounds.png",
+    "ImagePath": "rapid_rounds.png",
     "TargetTypes": null,
     "ShopFilters": ["FireRate", "Movement"],
     "Tooltip": {
@@ -5828,7 +5828,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/last_stand.png",
+    "ImagePath": "last_stand.png",
     "TargetTypes": null,
     "ShopFilters": ["Durability", "ClipSize", "Healing"],
     "Tooltip": {
@@ -5916,7 +5916,7 @@
     "Activation": "InstantCast",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/refresher_module.png",
+    "ImagePath": "refresher_module.png",
     "TargetTypes": null,
     "ShopFilters": null,
     "Tooltip": {
@@ -5979,7 +5979,7 @@
     "Activation": "ActivationPress",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/medic_beam.png",
+    "ImagePath": "medic_beam.png",
     "TargetTypes": ["HeroFriendly"],
     "ShopFilters": ["MagicDamage", "Durability", "Healing", "Movement"],
     "Tooltip": {
@@ -6072,7 +6072,7 @@
     "Activation": "ActivationPress",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/restorative_locket.png",
+    "ImagePath": "restorative_locket.png",
     "TargetTypes": ["HeroFriendly"],
     "ShopFilters": ["Healing", "Durability"],
     "Tooltip": {
@@ -6154,7 +6154,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/medic_bullets.png",
+    "ImagePath": "medic_bullets.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["WeaponDamage", "Healing"],
     "Tooltip": {
@@ -6232,7 +6232,7 @@
     "Activation": "InstantCast",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/return_fire.png",
+    "ImagePath": "return_fire.png",
     "TargetTypes": null,
     "ShopFilters": ["Durability", "MagicDamage", "FireRate"],
     "Tooltip": {
@@ -6314,7 +6314,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/ricochet.png",
+    "ImagePath": "ricochet.png",
     "TargetTypes": [
       "HeroEnemy",
       "TrooperEnemy",
@@ -6403,7 +6403,7 @@
     "Activation": "InstantCast",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/cloaking_device.png",
+    "ImagePath": "cloaking_device.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "FireRate", "Movement"],
     "Tooltip": {
@@ -6517,7 +6517,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": ["upgrade_long_range"],
-    "ImagePath": "src/assets/items/longshot.png",
+    "ImagePath": "longshot.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "ClipSize"],
     "Tooltip": {
@@ -6600,7 +6600,7 @@
     "Activation": "ActivationPress",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/targeted_silence.png",
+    "ImagePath": "targeted_silence.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["WeaponDamage", "Disruption"],
     "Tooltip": {
@@ -6685,7 +6685,7 @@
     "Activation": "InstantCast",
     "Slot": "Weapon",
     "Components": ["upgrade_slowing_bullets"],
-    "ImagePath": "src/assets/items/emp_bullets.png",
+    "ImagePath": "emp_bullets.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["WeaponDamage", "Disruption"],
     "Tooltip": {
@@ -6762,7 +6762,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/siphon_bullets.png",
+    "ImagePath": "siphon_bullets.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["WeaponDamage", "Healing"],
     "Tooltip": {
@@ -6838,7 +6838,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/slowing_bullets.png",
+    "ImagePath": "slowing_bullets.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["WeaponDamage", "Disruption"],
     "Tooltip": {
@@ -6908,7 +6908,7 @@
     "Activation": "ActivationPress",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/immobilize.png",
+    "ImagePath": "immobilize.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["Movement", "Disruption", "MagicDamage"],
     "Tooltip": {
@@ -7000,7 +7000,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/rebirth.png",
+    "ImagePath": "rebirth.png",
     "TargetTypes": null,
     "ShopFilters": null,
     "Tooltip": {
@@ -7071,7 +7071,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/tech_resist_shredder.png",
+    "ImagePath": "tech_resist_shredder.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Healing"],
     "Tooltip": {
@@ -7142,7 +7142,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/tech_armor.png",
+    "ImagePath": "tech_armor.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -7191,7 +7191,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/health_stealing_tech.png",
+    "ImagePath": "health_stealing_tech.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Healing", "Durability"],
     "Tooltip": {
@@ -7242,7 +7242,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/acolytes_glove.png",
+    "ImagePath": "acolytes_glove.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["MagicDamage", "Melee"],
     "Tooltip": {
@@ -7323,7 +7323,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/magic_overflow.png",
+    "ImagePath": "magic_overflow.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["MagicDamage", "FireRate"],
     "Tooltip": {
@@ -7412,7 +7412,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/sprint_booster.png",
+    "ImagePath": "sprint_booster.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Healing", "Movement"],
     "Tooltip": {
@@ -7468,7 +7468,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_magic_tempo"],
-    "ImagePath": "src/assets/items/spiritual_flow.png",
+    "ImagePath": "spiritual_flow.png",
     "TargetTypes": null,
     "ShopFilters": ["Healing"],
     "Tooltip": {
@@ -7530,7 +7530,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": ["upgrade_arcane_extension"],
-    "ImagePath": "src/assets/items/arcane_persistance.png",
+    "ImagePath": "arcane_persistance.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": null,
     "Tooltip": {
@@ -7598,7 +7598,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": ["upgrade_improved_stamina"],
-    "ImagePath": "src/assets/items/superior_stamina.png",
+    "ImagePath": "superior_stamina.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Movement", "FireRate"],
     "Tooltip": {
@@ -7669,7 +7669,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/weapon_jammer.png",
+    "ImagePath": "weapon_jammer.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["Healing", "Disruption"],
     "Tooltip": {
@@ -7743,7 +7743,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/magic_storm.png",
+    "ImagePath": "magic_storm.png",
     "TargetTypes": null,
     "ShopFilters": ["MagicDamage", "Movement"],
     "Tooltip": {
@@ -7827,7 +7827,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/fire_rate_plus.png",
+    "ImagePath": "fire_rate_plus.png",
     "TargetTypes": null,
     "ShopFilters": ["FireRate"],
     "Tooltip": {
@@ -7882,7 +7882,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/electrified_bullets.png",
+    "ImagePath": "electrified_bullets.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "FireRate"],
     "Tooltip": {
@@ -7964,7 +7964,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": ["upgrade_clip_size"],
-    "ImagePath": "src/assets/items/titanic_magazine.png",
+    "ImagePath": "titanic_magazine.png",
     "TargetTypes": null,
     "ShopFilters": ["ClipSize", "WeaponDamage"],
     "Tooltip": {
@@ -8025,7 +8025,7 @@
     "Activation": "Passive",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/torment_aura.png",
+    "ImagePath": "torment_aura.png",
     "TargetTypes": ["AllEnemy"],
     "ShopFilters": ["MagicDamage", "Durability"],
     "Tooltip": {
@@ -8095,7 +8095,7 @@
     "Activation": "Passive",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/serrated_bullets.png",
+    "ImagePath": "serrated_bullets.png",
     "TargetTypes": ["HeroEnemy", "CreepEnemy", "MinionEnemy"],
     "ShopFilters": ["MagicDamage", "Disruption"],
     "Tooltip": {
@@ -8176,7 +8176,7 @@
     "Activation": "InstantCast",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/unstoppable.png",
+    "ImagePath": "unstoppable.png",
     "TargetTypes": null,
     "ShopFilters": ["Durability", "Movement"],
     "Tooltip": {
@@ -8251,7 +8251,7 @@
     "Activation": "InstantCast",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/vampiric_burst.png",
+    "ImagePath": "vampiric_burst.png",
     "TargetTypes": ["HeroFriendly"],
     "ShopFilters": ["FireRate", "WeaponDamage", "Movement", "Healing"],
     "Tooltip": {
@@ -8344,7 +8344,7 @@
     "Activation": "Passive",
     "Slot": "Armor",
     "Components": null,
-    "ImagePath": "src/assets/items/veil_walker.png",
+    "ImagePath": "veil_walker.png",
     "TargetTypes": null,
     "ShopFilters": ["Durability", "ClipSize"],
     "Tooltip": {
@@ -8446,7 +8446,7 @@
     "Activation": "InstantCast",
     "Slot": "Weapon",
     "Components": null,
-    "ImagePath": "src/assets/items/warp_stone.png",
+    "ImagePath": "warp_stone.png",
     "TargetTypes": null,
     "ShopFilters": ["WeaponDamage", "Movement"],
     "Tooltip": {
@@ -8526,7 +8526,7 @@
     "Activation": "ActivationPress",
     "Slot": "Tech",
     "Components": null,
-    "ImagePath": "src/assets/items/disarm.png",
+    "ImagePath": "disarm.png",
     "TargetTypes": ["HeroEnemy"],
     "ShopFilters": ["Disruption", "MagicDamage"],
     "Tooltip": {
