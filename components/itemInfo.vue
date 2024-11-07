@@ -67,14 +67,26 @@ export default {
                 const itemRect = item.getBoundingClientRect(); 
                 const infoRect = itemInfoElement.getBoundingClientRect(); 
 
-                let left = itemRect.right;
+                let right = itemRect.right;
+                let bottom = itemRect.bottom;
+                let top = itemRect.top;
 
-                if (left + infoRect.width > window.innerWidth - 380) {
-                    left = itemRect.left - infoRect.width;
-
+                if (right + infoRect.width * 1.8 > window.innerWidth) {
                     itemInfoElement.setAttribute('data-position-right', true);
                 } else {
                     itemInfoElement.removeAttribute('data-position-right');
+                }
+
+                if (bottom + infoRect.height / 2 > window.innerHeight) {
+                    itemInfoElement.setAttribute('data-position-bottom', true);
+                } else {
+                    itemInfoElement.removeAttribute('data-position-bottom');
+                }
+
+                if (top  < infoRect.height / 2) {
+                    itemInfoElement.setAttribute('data-position-top', true);
+                } else {
+                    itemInfoElement.removeAttribute('data-position-top');
                 }
             });
 
@@ -99,35 +111,24 @@ export default {
     color: #F0E2C9;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: #C97A03;
-    transform: translateX(29%) translateY(-50%);
     position: absolute;
+    left: 105%;
     top: 50%;
-
-    &[data-position-right] {
-        transform: translateX(-103%) translateY(-50%);
-
-        &[data-item-tier='4'] {
-            top: unset;
-            transform: translateX(-103%) translateY(-100%);
-        }
-
-        &[data-item-tier='1'] {
-            top: 0;
-            transform: translateX(-103%);
-        }
-    }
-
-
-    &[data-item-tier='4'] {
+    transform: translateY(-50%);
+    &[data-position-bottom] {
+        bottom: 0;
         top: unset;
-        transform: translateX(29%) translateY(-100%);
-
+        transform: unset;
     }
-
-    &[data-item-tier='1'] {
+    &[data-position-top] {
         top: 0;
-        transform: translateX(29%);
+        transform: unset;
     }
+    &[data-position-right] {
+        right: 105%;
+        left: unset;
+    }
+
 
     &[data-item-type='Armor'] {
         background-color: #7CBB1E;

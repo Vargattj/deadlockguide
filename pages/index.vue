@@ -15,20 +15,19 @@
         Spirit
       </button>
     </nav>
-
     <div class="shop-items-wrapper" :data-item-type="selectedItemType.toLocaleLowerCase()">
       <itemsTierList :items="getItemsByTier('1')" tier="1" />
       <itemsTierList :items="getItemsByTier('2')" tier="2" />
       <itemsTierList :items="getItemsByTier('3')" tier="3" />
       <itemsTierList :items="getItemsByTier('4')" tier="4" />
     </div>
-
   </div>
 </template>
 
 <script>
-import itemsData from '../item-data.json';
+import itemsData from './item-data.json';
 import itemsTierList from './components/itemsTierList.vue';
+
 export default {
   components: { itemsTierList },
   data() {
@@ -38,11 +37,11 @@ export default {
       selectedItemType: 'Weapon',
     };
   },
-  async mounted() {
+  created() {
     this.getItems()
   },
   methods: {
-    async getItems() {
+    getItems() {
       const entriesItems = Object.entries(this.items)
       const filteredItems = entriesItems.filter(([key, value]) => value.Slot === this.selectedItemType);
       const filteredAndSortedObject = Object.fromEntries(filteredItems);
@@ -66,23 +65,6 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --color-weapon: #C97A03;
-  --color-armor: #7CBB1E;
-  --color-spirit: #CE91FF;
-  --color-primary: #170C00;
-  --color-secondary: #F0E2C9;
-  --weapon-filter: brightness(0) saturate(100%) invert(59%) sepia(91%) saturate(456%) hue-rotate(350deg) brightness(94%) contrast(96%);
-  --spirit-filter: brightness(0) saturate(100%) invert(57%) sepia(43%) saturate(1987%) hue-rotate(221deg) brightness(110%) contrast(101%);
-  --armor-filter: brightness(0) saturate(100%) invert(56%) sepia(97%) saturate(375%) hue-rotate(42deg) brightness(96%) contrast(88%);
-}
-
-body {
-  background-image: url('/assets/deadlock.avif');
-  display: flex;
-  justify-content: center;
-}
-
 .shop-tabs {
   display: flex;
   gap: 12px;
@@ -141,9 +123,10 @@ body {
 .shop-items-wrapper {
   border-top: 6px solid var(--color-weapon);
   background-color: #584021;
-  max-height: 80vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  // max-height: 80vh;
+  // overflow-x: clip;
+ // overflow-y: auto;
+
   &[data-item-type='armor'] {
     background-color: #325008;
     border-top: 6px solid var(--color-armor);

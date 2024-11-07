@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import itemsData from '../../item-data.json';
+import itemsData from '../item-data.json';
 import { toRaw } from 'vue';
 
 export default {
